@@ -1,0 +1,6 @@
+@import '../../node_modules/mc-sass-lib/src/stylesheets/mc-sass-lib.scss';
+
+body {
+  // overwrite mc-sass-lib default body black background
+  background-color: transparent !important
+}
