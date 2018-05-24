@@ -1,7 +1,7 @@
 import { configure, addDecorator } from '@storybook/react';
 
 import { backgrounds, StoryWrapper } from './decorators'
-import '../src/styles/index.scss'
+import './styles.scss'
 
 // load global decorators
 addDecorator(backgrounds)
