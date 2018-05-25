@@ -32,7 +32,8 @@ export default class Input extends PureComponent {
       style,
       fullWidth,
       error,
-      onChange
+      onChange,
+      ...props
     } = this.props
     const showLabel = label && placeholder && value
     const inputClassNames = classNames(
@@ -60,6 +61,7 @@ export default class Input extends PureComponent {
           type={type}
           placeholder={placeholder}
           onChange={this.onChange}
+          {...props}
         />
       </div>
     )
