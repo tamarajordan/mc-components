@@ -10,6 +10,7 @@ const Button = ({
   primary,
   secondary,
   tertiary,
+  ...props
 }) => {
   const styles = classNames(
     'c-button',
@@ -24,6 +25,7 @@ const Button = ({
     <button
       className={styles}
       onClick={onClick}
+      {...props}
     >
       {children}
     </button>
