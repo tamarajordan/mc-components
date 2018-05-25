@@ -5,9 +5,14 @@ import { withInfo } from '@storybook/addon-info';
 
 import Button from '../Button'
 
+const infoProps = {
+  inline: true,
+  header: false,
+}
+
 storiesOf('Button', module)
   .add('primary', 
-    withInfo()(() =>
+    withInfo({ ...infoProps })(() =>
       <Button
         onClick={action('clicked')}
         primary
@@ -17,10 +22,20 @@ storiesOf('Button', module)
     )
   )
   .add('secondary',
-    withInfo()(() =>
+    withInfo({ ...infoProps })(() =>
       <Button
         onClick={action('clicked')}
         secondary
+      >
+        Button
+      </Button>
+    )
+  )
+  .add('tertiary',
+    withInfo({ ...infoProps })(() =>
+      <Button
+        onClick={action('clicked')}
+        tertiary
       >
         Button
       </Button>
