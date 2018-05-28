@@ -1,7 +1,6 @@
-import React, { Component } from 'react';
-import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
-import { withInfo } from '@storybook/addon-info';
+import React, { Component } from 'react'
+import { storiesOf } from '@storybook/react'
+import { withInfo } from '@storybook/addon-info'
 
 import InputComponent from '../Input'
 
@@ -9,7 +8,7 @@ import InputComponent from '../Input'
 class Input extends Component {
   state = { value: '' }
 
-  render() {
+  render () {
     const { value } = this.state
 
     return (
@@ -29,35 +28,35 @@ const infoProps = {
   inline: true,
   header: false,
   propTables: [InputComponent],
-  propTablesExclude: [Input]
+  propTablesExclude: [Input],
 }
 
 storiesOf('Input', module)
   .add('default',
     withInfo({
-      ...infoProps
+      ...infoProps,
     })(() =>
-      <Input placeholder='My input' />
-    )
+      <Input placeholder='My input' />,
+    ),
   )
   .add('with label',
     withInfo({
-      ...infoProps
+      ...infoProps,
     })(() =>
-      <Input placeholder='My input' label='My input' />
-    )
+      <Input placeholder='My input' label='My input' />,
+    ),
   )
   .add('fixed width',
     withInfo({
-      ...infoProps
+      ...infoProps,
     })(() =>
-      <Input placeholder='My input' fullWidth={false} style={{ width: '200px' }} />
-    )
+      <Input placeholder='My input' fullWidth={false} style={{ width: '200px' }} />,
+    ),
   )
   .add('with error',
     withInfo({
-      ...infoProps
+      ...infoProps,
     })(() =>
-      <Input placeholder='My email' error='Email is required' />
-    )
+      <Input placeholder='My email' error='Email is required' />,
+    ),
   )

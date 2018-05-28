@@ -21,7 +21,8 @@
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 9001 -c .storybook",
     "deploy-storybook": "storybook-to-ghpages",
-    "prepublish": "npm run build"
+    "prepublishOnly": "npm run build",
+    "lint": "eslint src --color"
   },
   "devDependencies": {
     "@storybook/addon-backgrounds": "^3.4.5",
@@ -29,8 +30,14 @@
     "@storybook/react": "^3.4.5",
     "@storybook/storybook-deployer": "^2.3.0",
     "babel-cli": "^6.26.0",
+    "babel-eslint": "8.2.3",
     "cpx": "^1.5.0",
     "css-loader": "^0.28.11",
+    "eslint": "4.19.1",
+    "eslint-config-airbnb": "16.1.0",
+    "eslint-plugin-import": "2.11.0",
+    "eslint-plugin-jsx-a11y": "6.0.3",
+    "eslint-plugin-react": "7.7.0",
     "rimraf": "^2.6.2",
     "sass-loader": "^7.0.1",
     "style-loader": "^0.21.0"

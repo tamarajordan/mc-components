@@ -11,6 +11,7 @@ export default class Input extends PureComponent {
     label: string,
     fullWidth: bool,
     style: object,
+    error: string,
   }
 
   static defaultProps = {
@@ -23,7 +24,7 @@ export default class Input extends PureComponent {
     onChange(value)
   }
 
-  render() {
+  render () {
     const {
       value,
       type,
@@ -44,7 +45,7 @@ export default class Input extends PureComponent {
     )
     const labelClassNames = classNames(
       'input-field__label',
-      {  'input-field__label--hide': !showLabel }
+      { 'input-field__label--hide': !showLabel },
     )
 
     return (
