@@ -19,7 +19,7 @@ const Button = ({
       'c-button--primary': primary,
       'c-button--secondary': secondary,
       'c-button--tertiary': tertiary,
-    }
+    },
   )
   return (
     <button

@@ -1,7 +1,7 @@
-import React from 'react';
-import { storiesOf } from '@storybook/react';
-import { action } from '@storybook/addon-actions';
-import { withInfo } from '@storybook/addon-info';
+import React from 'react'
+import { storiesOf } from '@storybook/react'
+import { action } from '@storybook/addon-actions'
+import { withInfo } from '@storybook/addon-info'
 
 import Button from '../Button'
 
@@ -11,15 +11,15 @@ const infoProps = {
 }
 
 storiesOf('Button', module)
-  .add('primary', 
+  .add('primary',
     withInfo({ ...infoProps })(() =>
       <Button
         onClick={action('clicked')}
         primary
       >
         Button
-      </Button>
-    )
+      </Button>,
+    ),
   )
   .add('secondary',
     withInfo({ ...infoProps })(() =>
@@ -28,8 +28,8 @@ storiesOf('Button', module)
         secondary
       >
         Button
-      </Button>
-    )
+      </Button>,
+    ),
   )
   .add('tertiary',
     withInfo({ ...infoProps })(() =>
@@ -38,6 +38,6 @@ storiesOf('Button', module)
         tertiary
       >
         Button
-      </Button>
-    )
+      </Button>,
+    ),
   )
