@@ -17,7 +17,7 @@ const InputReduxForm = ({
       label={label}
       type={type}
       placeholder={placeholder}
-      error={showError ? error : ''}
+      error={showError ? error[0] : ''}
       {...input}
     />
   )

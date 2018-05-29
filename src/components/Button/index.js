@@ -1,7 +1,7 @@
 import React from 'react'
 import classNames from 'classnames'
 
-import { string, func, bool } from 'prop-types'
+import { string, func, bool, node, oneOfType, arrayOf } from 'prop-types'
 
 const Button = ({
   children,
@@ -14,7 +14,7 @@ const Button = ({
 }) => {
   const styles = classNames(
     'c-button',
-    { className: Boolean(className) },
+    { [className]: Boolean(className) },
     {
       'c-button--primary': primary,
       'c-button--secondary': secondary,
@@ -33,7 +33,11 @@ const Button = ({
 }
 
 Button.propTypes = {
-  children: string.isRequired,
+  children: oneOfType([
+    arrayOf(node),
+    node,
+    string,
+  ]),
   className: string,
   onClick: func,
   primary: bool,
@@ -48,6 +52,5 @@ Button.defaultProps = {
   secondary: false,
   tertiary: false,
 }
-
 
 export default Button
