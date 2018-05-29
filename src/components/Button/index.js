@@ -10,6 +10,8 @@ const Button = ({
   primary,
   secondary,
   tertiary,
+  withIcon,
+  fullWidth,
   ...props
 }) => {
   const styles = classNames(
@@ -19,8 +21,11 @@ const Button = ({
       'c-button--primary': primary,
       'c-button--secondary': secondary,
       'c-button--tertiary': tertiary,
+      'c-button--with-icon': withIcon,
+      'c-button--full-width': fullWidth,
     },
   )
+
   return (
     <button
       className={styles}
@@ -43,6 +48,8 @@ Button.propTypes = {
   primary: bool,
   secondary: bool,
   tertiary: bool,
+  withIcon: bool,
+  fullWidth: bool,
 }
 
 Button.defaultProps = {
@@ -51,6 +58,8 @@ Button.defaultProps = {
   primary: false,
   secondary: false,
   tertiary: false,
+  withIcon: false,
+  fullWidth: false,
 }
 
 export default Button

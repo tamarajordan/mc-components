@@ -1,0 +1,11 @@
+.c-button--with-icon {
+  @extend %flex-centered;
+
+  span {
+    margin-left: 1.3rem;
+  }
+}
+
+.c-button--full-width {
+  width: 100%;
+}
