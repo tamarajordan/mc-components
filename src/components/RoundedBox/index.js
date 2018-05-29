@@ -1,17 +1,29 @@
 import React from 'react'
-import { node, oneOfType, arrayOf, string } from 'prop-types'
+import { node, func, oneOfType, arrayOf, string, object } from 'prop-types'
+import classNames from 'classnames'
 
-const RoundedBox = ({ children, header, subheader }) => (
-  <div className='rounded-box'>
-    {subheader &&
-      <h4 className='rounded-box__subheader'>{subheader}</h4>
-    }
-    {header &&
-      <h2 className='rounded-box__header'>{header}</h2>
-    }
-    {children}
-  </div>
-)
+import RoundedBoxHeader from '../RoundedBoxHeader'
+
+const RoundedBox = ({
+  children,
+  header,
+  subheader,
+  style,
+  className = '',
+  HeaderComponent = RoundedBoxHeader,
+}) => {
+  const containerClassNames = classNames(
+    'rounded-box',
+    { [className]: Boolean(className) },
+  )
+
+  return (
+    <div style={style} className={containerClassNames}>
+      <HeaderComponent subheader={subheader} header={header} />
+      {children}
+    </div>
+  )
+}
 
 RoundedBox.propTypes = {
   children: oneOfType([
@@ -20,6 +32,9 @@ RoundedBox.propTypes = {
   ]),
   header: string,
   subheader: string,
+  className: string,
+  style: object,
+  HeaderComponent: func,
 }
 
 export default RoundedBox
