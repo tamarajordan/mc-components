@@ -1,0 +1,9 @@
+.rounded-box {
+  background-color: $white;
+  border-radius: .4rem;
+  padding: 4rem;
+
+  @include media-breakpoint-down(sm) {
+    padding: 2rem;
+  }
+}
