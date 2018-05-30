@@ -17,3 +17,13 @@ storiesOf('RoundedBox', module)
       </RoundedBox>,
     ),
   )
+  .add('with header',
+    withInfo({ ...infoProps })(() =>
+      <RoundedBox
+        header='Header'
+        subheader='Sub header'
+      >
+        <p>Content</p>
+      </RoundedBox>,
+    ),
+  )
