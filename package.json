@@ -1,6 +1,6 @@
 {
   "name": "mc-components",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "main": "./lib/components/index.js",
   "author": "Bernabe Gonzalez <gobernabe@gmail.com>",
   "homepage": "https://bernabe9.github.io/mc-components",
