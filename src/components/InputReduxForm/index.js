@@ -1,6 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+
 import Input from '../Input'
+import { parseInputErrors } from '../../utils/helpers'
 
 // Redux Form handler for the Input Component
 const InputReduxForm = ({
@@ -10,14 +12,15 @@ const InputReduxForm = ({
   meta: { touched, error },
   type = 'text',
 }) => {
-  const showError = touched && error
+  const parsedError = parseInputErrors(error)
+  const showError = touched && parsedError
 
   return (
     <Input
       label={label}
       type={type}
       placeholder={placeholder}
-      error={showError ? error[0] : ''}
+      error={showError ? parsedError : ''}
       {...input}
     />
   )
