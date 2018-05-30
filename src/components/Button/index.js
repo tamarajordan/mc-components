@@ -12,6 +12,7 @@ const Button = ({
   tertiary,
   withIcon,
   fullWidth,
+  text,
   ...props
 }) => {
   const styles = classNames(
@@ -23,6 +24,7 @@ const Button = ({
       'c-button--tertiary': tertiary,
       'c-button--with-icon': withIcon,
       'c-button--full-width': fullWidth,
+      'c-button--text': text,
     },
   )
 
@@ -50,6 +52,7 @@ Button.propTypes = {
   tertiary: bool,
   withIcon: bool,
   fullWidth: bool,
+  text: bool,
 }
 
 Button.defaultProps = {
@@ -60,6 +63,7 @@ Button.defaultProps = {
   tertiary: false,
   withIcon: false,
   fullWidth: false,
+  text: false,
 }
 
 export default Button
