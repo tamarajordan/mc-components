@@ -11,12 +11,14 @@
 }
 
 .c-button--text {
-  margin: 2.4rem auto;
   font-weight: bold;
   font-size: 1.3rem;
   letter-spacing: .15rem;
   color: rgba($black, .5);
   padding: 0;
-  display: block;
   background-color: transparent;
+}
+
+.c-button--facebook {
+  @include button-variant($facebook-blue, $facebook-blue)
 }
