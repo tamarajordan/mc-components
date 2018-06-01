@@ -1,13 +1,13 @@
 .input-field {
   $padding-vertical: 1.6rem;
-  $padding-horizontal: 1.2rem;
+  $padding-horizontal: 1.3rem;
 
   position: relative;
   line-height: 2rem;
   margin: 1.2rem 0;
 
   &__input {
-    padding: 1.8rem $padding-vertical .6rem;
+    padding: $padding-horizontal $padding-vertical;
     font-family: 'Lato', sans-serif;
     border-radius: .4rem;
     border: .1rem solid rgba($text-color,0.2);
@@ -26,8 +26,8 @@
       color: rgba($text-color, .5);
     }
 
-    &--placeholder {
-      padding: $padding-horizontal $padding-vertical;
+    &--with-label {
+      padding: 1.8rem $padding-vertical .8rem;
     }
 
     &--full-width {
@@ -40,6 +40,10 @@
       &:focus {
         border-color: $error-color;
       }
+    }
+
+    &--no-resize {
+      resize: none;
     }
   }
 
