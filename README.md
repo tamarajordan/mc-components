@@ -5,6 +5,8 @@
 [![Build status: Linux](https://travis-ci.org/bernabe9/mc-components.svg?branch=master)](https://travis-ci.org/bernabe9/mc-components)
 [![Dependency Status](https://img.shields.io/david/bernabe9/mc-components.svg)](https://david-dm.org/bernabe9/mc-components)
 
+mc-components aims to provide primitive components to build user interfaces in MasterClass
+
 ## Installation
 `yarn add mc-components` or `npm install mc-components --save`
 
@@ -21,3 +23,9 @@ import { Button } from 'mc-components'
 const Container = () =>
   <Button primary>Hello</Button>
 ```
+
+## Development
+
+1. Clone the repository
+2. Install dependencies: `yarn`
+3. Start the storybook: `yarn storybook`
