@@ -1,6 +1,6 @@
 import React, { PureComponent } from 'react'
 import { string, func, object, bool } from 'prop-types'
-import classNames from 'classnames'
+import cn from 'classnames'
 
 export default class Input extends PureComponent {
   static propTypes = {
@@ -37,13 +37,13 @@ export default class Input extends PureComponent {
       ...props
     } = this.props
     const showLabel = label && placeholder && value
-    const inputClassNames = classNames(
+    const inputClassNames = cn(
       'input-field__input',
       { 'input-field__input--placeholder': !showLabel },
       { 'input-field__input--full-width': fullWidth },
       { 'input-field__input--error': error },
     )
-    const labelClassNames = classNames(
+    const labelClassNames = cn(
       'input-field__label',
       { 'input-field__label--hide': !showLabel },
     )

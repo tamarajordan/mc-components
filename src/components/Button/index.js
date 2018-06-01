@@ -1,5 +1,5 @@
 import React from 'react'
-import classNames from 'classnames'
+import cn from 'classnames'
 
 import { string, func, bool, node, oneOfType, arrayOf } from 'prop-types'
 
@@ -15,7 +15,7 @@ const Button = ({
   text,
   ...props
 }) => {
-  const styles = classNames(
+  const classNames = cn(
     'c-button',
     { [className]: Boolean(className) },
     {
@@ -30,7 +30,7 @@ const Button = ({
 
   return (
     <button
-      className={styles}
+      className={classNames}
       onClick={onClick}
       {...props}
     >
