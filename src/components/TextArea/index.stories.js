@@ -2,10 +2,10 @@ import React, { Component } from 'react'
 import { storiesOf } from '@storybook/react'
 import { withInfo } from '@storybook/addon-info'
 
-import InputComponent from '../Input'
+import TextAreaComponent from '../TextArea'
 
-// Input Handler
-class Input extends Component {
+// TextArea Handler
+class TextArea extends Component {
   state = { value: '' }
 
   render () {
@@ -13,7 +13,7 @@ class Input extends Component {
 
     return (
       <div style={{ maxWidth: '500px' }}>
-        <InputComponent
+        <TextAreaComponent
           {...this.props}
           value={value}
           onChange={value => this.setState({ value })}
@@ -27,43 +27,36 @@ const infoProps = {
   source: true,
   inline: true,
   header: false,
-  propTables: [InputComponent],
-  propTablesExclude: [Input],
+  propTables: [TextAreaComponent],
+  propTablesExclude: [TextArea],
 }
 
-storiesOf('Input', module)
+storiesOf('TextArea', module)
   .add('default',
     withInfo({
       ...infoProps,
     })(() =>
-      <Input placeholder='My input' />,
-    ),
-  )
-  .add('with label',
-    withInfo({
-      ...infoProps,
-    })(() =>
-      <Input placeholder='My input' label='My input' />,
+      <TextArea placeholder='My text area' />,
     ),
   )
   .add('fixed width',
     withInfo({
       ...infoProps,
     })(() =>
-      <Input placeholder='My input' fullWidth={false} style={{ width: '200px' }} />,
+      <TextArea placeholder='My text area' fullWidth={false} style={{ width: '200px' }} />,
     ),
   )
   .add('with error',
     withInfo({
       ...infoProps,
     })(() =>
-      <Input placeholder='My email' error='Email is required' />,
+      <TextArea placeholder='My text area' error='This text area is required' />,
     ),
   )
   .add('without placeholder',
     withInfo({
       ...infoProps,
     })(() =>
-      <Input />,
+      <TextArea />,
     ),
   )
