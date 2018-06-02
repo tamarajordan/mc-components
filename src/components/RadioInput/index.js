@@ -1,37 +1,44 @@
 import React, { PureComponent } from 'react'
-import PropTypes from 'prop-types'
+import { string, func, bool, object } from 'prop-types'
 import cn from 'classnames'
 
 export default class RadioInput extends PureComponent {
   static propTypes = {
-    label: PropTypes.string.isRequired,
-    onChange: PropTypes.func.isRequired,
-    checked: PropTypes.bool,
+    label: string.isRequired,
+    onChange: func.isRequired,
+    checked: bool,
+    style: object,
   }
 
   static defaultProps = {
     checked: false,
   }
 
-  handleInputChange (e) {
+  handleInputChange = (e) => {
     const { onChange } = this.props
-    onChange(e.target.value)
+    onChange(e.target.checked)
   }
 
   render () {
-    const { checked, label } = this.props
+    const {
+      checked,
+      label,
+      style,
+      ...props
+    } = this.props
     const classNames = cn(
       'radio-input__mock',
       { 'radio-input__mock--checked': checked },
     )
 
     return (
-      <div className='radio-input'>
+      <div style={style} className='radio-input'>
         <input
           className='radio-input__input'
           checked={checked}
           type='radio'
           onChange={this.handleInputChange}
+          {...props}
         />
         <div
           onClick={this.handleInputChange}

@@ -76,6 +76,14 @@
     }
   }
 
+  &__paragraph {
+    font-size: 1.6rem;
+    line-height: 2.4rem;
+    text-align: center;
+    letter-spacing: .02rem;
+    color: rgba($text-color, .8);
+  }
+
   &__body--open {
     overflow: hidden;
   }
