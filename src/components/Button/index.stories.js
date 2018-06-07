@@ -66,3 +66,14 @@ storiesOf('Button', module)
       </Button>,
     ),
   )
+  .add('loading',
+    withInfo({ ...infoProps })(() =>
+      <Button
+        onClick={action('clicked')}
+        primary
+        loading
+      >
+        Button
+      </Button>,
+    ),
+  )
